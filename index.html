@@ -7,6 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
+    <!--  Window/Tab FAVICON  -->
+    <link rel="shortcut icon" type="image/jpg" href="img/logo.jpg"/>
+    
     <!--  Window/Tab TITLE  -->
     <title>Garden Gem</title>
     
@@ -21,18 +24,20 @@
 <!--  BODY  -->
 <body>
     <!--  NAV BAR  -->
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <nav class="light-green darken-4" role="navigation">
+        <div class="nav-wrapper container" style="display: grid">
+            <a id="logo-container" href="#" class="right light-green-text text-lighten-4 brand-logo">
+                <img class="logo" src="img/logo.jpg" alt="logo"/>
+            </a>
             
             <!--  WEB NAV BAR  -->
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link0</a></li>
+            <ul class="left hide-on-med-and-down">
+                <li><a class="light-green-text text-lighten-4" href="#">Navbar Link0</a></li>
             </ul>
             
             <!--  MOBILE NAV BAR  -->
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#">Navbar Link0</a></li>
+            <ul id="nav-mobile" class="sidenav light-green darken-4">
+                <li><a class="light-green-text text-lighten-4" href="#">Navbar Link0</a></li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -44,7 +49,7 @@
             <div class="container">
                 <br><br>
                 <!--  TITLE  -->
-                <h1 class="header center teal-text text-lighten-2 shadowed">Garden Gem</h1>
+                <h1 class="header center light-green-text text-darken-1 shadowed">Garden Gem</h1>
                 
                 <!--  DESCRPTION  -->
                 <div class="row center">
@@ -147,7 +152,7 @@
 
     
     <!--  FOOTER  -->
-    <footer class="page-footer teal">
+    <footer class="page-footer light-green darken-4">
         <div class="container">
             <div class="row">
                 
@@ -184,7 +189,12 @@
         <!--  COPYRIGHT  -->
         <div class="footer-copyright">
             <div class="container">
-                Powered by <a class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>
+                <ul>
+                    <li>Powered by:</li>
+                    <li><a class="brown-text text-lighten-3" href="https://github.com/KiraSensei13/GardenGem" target="_blank">GitHub</a></li>
+                    <li><a class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a></li>
+                    <li><a class="brown-text text-lighten-3" href="https://www.freepik.com/free-photos-vectors/background">freepik</a></li>
+                </ul>
             </div>
         </div>
     </footer>
@@ -193,6 +203,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/style.js"></script>
     
     </body>
 </html>
