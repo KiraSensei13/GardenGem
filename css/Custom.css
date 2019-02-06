@@ -1,4 +1,18 @@
+
+/*Add shadow to an element/object*/
 .shadowed {
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
+
+/*Stretch an image to fill a div/container while keeping the aspect-ratio*/
+.container img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.container img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}​
