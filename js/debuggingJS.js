@@ -19,7 +19,7 @@ fullURL           = CORSproxy + '?' + url + trefleToken;
 
 $.getJSON(fullURL, function(response){
     console.log(response);
-    document.getElementById("DebugCont").innerHTML = JSON.stringify(response);
+    document.getElementById("resText").innerHTML = JSON.stringify(response);
 });
 
 
