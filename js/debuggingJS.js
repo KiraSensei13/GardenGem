@@ -32,8 +32,7 @@ $.ajax({
     dataType: "json",
     url: fullURL,
     success: function(data) {
-        console.log(data.getResponseHeader);
-        console.log(data.getJSON);
+        console.log(data);
         //Your code
     }
 });
