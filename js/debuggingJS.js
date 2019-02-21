@@ -23,20 +23,23 @@ $.getJSON(fullURL, function(response){
 });
 */
 
-var Http = new XMLHttpRequest();
-Http.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        
+function reqListener () {
         var responseHeaders = JSON.parse(this.getAllResponseHeaders);
         console.log(responseHeaders);
         document.getElementById("resHeader").innerHTML = responseHeaders;
-        
+
         var responseContent = JSON.parse(this.responseText);
         console.log(responseContent);
         document.getElementById("resText").innerHTML = responseContent;
-    
-    };
+}
+
+var Http = new XMLHttpRequest();
+Http.onreadystatechange = function() {
+    /*if (this.readyState == 4 && this.status == 200) {
+    };*/
+    xhttp.addEventListener("load", reqListener);
     xhttp.open("GET", fullURL, true);
     xhttp.send();
 };
+
 // document.getElementById("DebugCont").innerHTML = "New text!";
