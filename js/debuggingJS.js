@@ -1,4 +1,4 @@
-var url='http://cors.io/?https://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
+var url='https://cors.io/?https://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
 
 $.getJSON(url, function(response){
     console.log(response);
