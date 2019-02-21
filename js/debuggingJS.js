@@ -27,11 +27,13 @@ var Http = new XMLHttpRequest();
 Http.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         
-        console.log(this.getAllResponseHeaders);
-        document.getElementById("resHeader").innerHTML = this.getAllResponseHeaders;
+        var responseHeaders = JSON.parse(this.getAllResponseHeaders);
+        console.log(responseHeaders);
+        document.getElementById("resHeader").innerHTML = responseHeaders;
         
-        console.log(this.responseText);
-        document.getElementById("resText").innerHTML = this.responseText;
+        var responseContent = JSON.parse(this.responseText);
+        console.log(responseContent);
+        document.getElementById("resText").innerHTML = responseContent;
     
     };
     xhttp.open("GET", fullURL, true);
