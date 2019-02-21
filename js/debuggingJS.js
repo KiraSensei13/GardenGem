@@ -24,13 +24,13 @@ $.getJSON(fullURL, function(response){
 */
 
 function reqListener () {
-        var responseHeaders = JSON.parse(this.getAllResponseHeaders);
-        console.log(responseHeaders);
-        document.getElementById("resHeader").innerHTML = responseHeaders;
+        var responseHeader = JSON.parse(this.getResponseHeader);
+        console.log(responseHeader);
+        document.getElementById("resHeader").innerHTML = JSON.stringify(responseHeader);
 
         var responseContent = JSON.parse(this.responseText);
         console.log(responseContent);
-        document.getElementById("resText").innerHTML = responseContent;
+        document.getElementById("resText").innerHTML = JSON.stringify(responseContent);
 }
 
 var Http = new XMLHttpRequest();
@@ -39,7 +39,7 @@ Http.onreadystatechange = function() {
     };*/
     xhttp.addEventListener("load", reqListener);
     xhttp.open("GET", fullURL, true);
-    xhttp.send();
+    xhttp.send('');
 };
 
 // document.getElementById("DebugCont").innerHTML = "New text!";
