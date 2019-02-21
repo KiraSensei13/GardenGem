@@ -24,13 +24,15 @@ $.getJSON(fullURL, function(response){
 */
 
 var Http = new XMLHttpRequest();
-Http.onreadystatechange=(e)=>{
+Http.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        
+        console.log(Http.getAllResponseHeaders);
+        document.getElementById("resHeader").innerHTML = Http.getAllResponseHeaders;
+        
+        console.log(Http.responseText);
+        document.getElementById("resText").innerHTML = Http.responseText;
     
-    console.log(Http.getAllResponseHeaders);
-    document.getElementById("resHeader").innerHTML = Http.getAllResponseHeaders;
-    
-    console.log(Http.responseText);
-    document.getElementById("resText").innerHTML = Http.responseText;
-    
-}
+    };
+};
 // document.getElementById("DebugCont").innerHTML = "New text!";
