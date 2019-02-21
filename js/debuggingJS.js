@@ -1,4 +1,6 @@
-var url='https://cors.io/?https://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
+var CORSproxy = 'https://cors.io/';
+var url       = 'https://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
+fullURL       = CORSproxy + '?' + url;
 
 $.getJSON(url, function(response){
     console.log(response);
