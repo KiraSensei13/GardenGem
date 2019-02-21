@@ -27,12 +27,14 @@ var Http = new XMLHttpRequest();
 Http.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         
-        console.log(Http.getAllResponseHeaders);
-        document.getElementById("resHeader").innerHTML = Http.getAllResponseHeaders;
+        console.log(this.getAllResponseHeaders);
+        document.getElementById("resHeader").innerHTML = this.getAllResponseHeaders;
         
-        console.log(Http.responseText);
-        document.getElementById("resText").innerHTML = Http.responseText;
+        console.log(this.responseText);
+        document.getElementById("resText").innerHTML = this.responseText;
     
     };
+    xhttp.open("GET", fullURL, true);
+    xhttp.send();
 };
 // document.getElementById("DebugCont").innerHTML = "New text!";
