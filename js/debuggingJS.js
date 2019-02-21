@@ -25,12 +25,14 @@ $.getJSON(fullURL, function(response){
 */
 
 $.ajax({
-    dataType: "json",
+    type: 'GET',
     url: fullURL,
+    processData: true,
+    data: {},
+    dataType: "json",
     success: function(data) {
         console.log(data.getResponseHeader);
         console.log(data);
-        //Your code
     }
 });
 
