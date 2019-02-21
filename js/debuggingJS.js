@@ -33,6 +33,9 @@ $.ajax({
     success: function(data) {
         console.log(data);
         //Your code
+    },
+    headers: function(hd) {
+        console.log(hd);
     }
 });
 
