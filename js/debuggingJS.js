@@ -16,14 +16,14 @@ const trefleToken = '/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
 const url         = 'https://trefle.io/api/plants';
 fullURL           = CORSproxy + '?' + url + trefleToken;
 
-/*
+
 $.getJSON(fullURL, function(response){
     console.log(response);
-    document.getElementById("DebugCont").innerHTML = response;
+    document.getElementById("DebugCont").innerHTML = JSON.stringify(response);
 });
-*/
 
-function reqListener () {
+
+/*function reqListener () {
         var responseHeader = JSON.parse(this.getResponseHeader);
         console.log(responseHeader);
         document.getElementById("resHeader").innerHTML = JSON.stringify(responseHeader);
@@ -40,6 +40,6 @@ Http.onreadystatechange = function() {
     xhttp.addEventListener("load", reqListener);
     xhttp.open("GET", fullURL, true);
     xhttp.send('');
-};
+};*/
 
 // document.getElementById("DebugCont").innerHTML = "New text!";
