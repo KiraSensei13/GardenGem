@@ -1,8 +1,9 @@
 var CORSproxy = 'https://cors.io/';
-var url       = 'https://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
-fullURL       = CORSproxy + '?' + url;
+var trefleToken = 'SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
+var url       = 'https://trefle.io/api/plants/138738/?token=';
+fullURL       = CORSproxy + '?' + url + trefleToken;
 
-$.getJSON(url, function(response){
+$.getJSON(fullURL, function(response){
     console.log(response);
     document.getElementById("DebugCont").innerHTML = response;
 });
