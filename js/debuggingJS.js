@@ -25,17 +25,12 @@ $.getJSON(fullURL, function(response){
 */
 
 $.ajax({
-    beforeSend: function(request) {
-        console.log(request.getResponseHeader);
-    },
     dataType: "json",
     url: fullURL,
     success: function(data) {
+        console.log(data.getAllResponseHeaders);
         console.log(data);
         //Your code
-    },
-    headers: function(hd) {
-        console.log(hd);
     }
 });
 
