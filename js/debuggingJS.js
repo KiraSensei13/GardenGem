@@ -35,8 +35,7 @@ $.getJSON(fullURL, function(response){
 
 var Http = new XMLHttpRequest();
 Http.onreadystatechange = function() {
-    /*if (this.readyState == 4 && this.status == 200) {
-    };*/
+    //if (this.readyState == 4 && this.status == 200) {};
     xhttp.addEventListener("load", reqListener);
     xhttp.open("GET", fullURL, true);
     xhttp.send('');
