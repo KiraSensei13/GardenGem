@@ -17,6 +17,8 @@ const url         = 'https://trefle.io/api/plants';
 fullURL           = CORSproxy + '?' + url + trefleToken;
 console.log(fullURL);
 
+var plant = {};
+
 /*
 $.getJSON(fullURL, function(response){
     console.log(response);
@@ -45,23 +47,27 @@ function makeAjaxCall(urlTo){
     //this section is always executed
     jqxhr.always(function(){
         console.log(jqxhr);
-        console.log(jqxhr.getResponseHeader('link'));
-        console.log(jqxhr.getResponseHeader('page-number'));
-        console.log(jqxhr.getResponseHeader('per-page'));
-        console.log(jqxhr.getResponseHeader('total'));
-        console.log(jqxhr.getResponseHeader('total-pages'));
         console.log(jqxhr.responseJSON);
+        
+        plant = JSON.parse(jqxhr.responseJSON);
     });
 }
 
 /*
-link: Provides links to the first, next, previous and last pages.
-page-number The current page number.
-per-page The current number of items per page.
-total The total number of items.
-total-pages The number of pages.
+console.log(jqxhr.getResponseHeader('link'));
+console.log(jqxhr.getResponseHeader('page-number'));
+console.log(jqxhr.getResponseHeader('per-page'));
+console.log(jqxhr.getResponseHeader('total'));
+console.log(jqxhr.getResponseHeader('total-pages'));
+        
+link        : Provides links to the first, next, previous and last pages.
+page-number : The current page number.
+per-page    : The current number of items per page.
+total       : The total number of items.
+total-pages : The number of pages.
 */
 
 makeAjaxCall(fullURL)
 
-// document.getElementById("DebugCont").innerHTML = "New text!";
+console.log(plant);
+document.getElementById("DebugCont").innerHTML = plant;
