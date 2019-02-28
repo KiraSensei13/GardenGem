@@ -70,4 +70,4 @@ total-pages : The number of pages.
 makeAjaxCall(fullURL)
 
 console.log(plant);
-document.getElementById("DebugCont").innerHTML = plant;
+document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
