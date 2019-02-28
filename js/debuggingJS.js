@@ -33,13 +33,18 @@ function makeAjaxCall(urlTo){
     });
     
     //this section is executed when the server responds with no error
-    jqxhr.done(function(data){
-        console.log("getting data " + data);
+    jqxhr.done(function(){
+        
     });
     
     //this section is executed when the server responds with error
     jqxhr.fail(function(){
         
+    });
+    
+    //this section is executed when the server responds successfully
+    jqxhr.done(function(data){
+        console.log("getting data " + data);
     });
     
     //this section is always executed
