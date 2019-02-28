@@ -33,8 +33,8 @@ function makeAjaxCall(urlTo){
     });
     
     //this section is executed when the server responds with no error
-    jqxhr.done(function(){
-        
+    jqxhr.done(function(data){
+        console.log("getting data " + data);
     });
     
     //this section is executed when the server responds with error
@@ -43,10 +43,9 @@ function makeAjaxCall(urlTo){
     });
     
     //this section is always executed
-    jqxhr.always(function(data){
+    jqxhr.always(function(){
         console.log(jqxhr);
         console.log("getting header " + jqxhr.getResponseHeader('testHeader'));
-        console.log("getting data " + data);
     });
 }
 
