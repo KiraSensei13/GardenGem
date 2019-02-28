@@ -64,10 +64,12 @@ total       : The total number of items.
 total-pages : The number of pages.
 */
 
-for (var page = 1; page < 5; page++) {
+for (var page = 1; page < 4907; page++) {
     var fullURL = CORSproxy + '?' + url + page + trefleToken;
     console.log(fullURL);
-    makeAjaxCall(fullURL)
+    makeAjaxCall(fullURL);
+    
+    if (page == 4906) {console.log(plantCollection);}
 }
 
 //document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
