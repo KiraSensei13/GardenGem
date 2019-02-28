@@ -51,7 +51,9 @@ jqxhr.fail(function(){
 
 //this section is always executed
 jqxhr.always(function(){
+    console.log(jqxhr);
     console.log("getting header " + jqxhr.getResponseHeader('testHeader'));
+    console.log("getting data " + jqxhr.data);
 });
 
 
