@@ -31,7 +31,6 @@ function makeAjaxCall(urlTo){
         data: {},
         dataType: "json"
     });
-    var plant;
     
     //this section is executed when the server responds with no error
     jqxhr.done(function(){
@@ -45,14 +44,12 @@ function makeAjaxCall(urlTo){
     
     //this section is always executed
     jqxhr.always(function(){
-        console.log(jqxhr);
+        //console.log(jqxhr);
         //console.log(jqxhr.responseJSON);
+        //console.log(jqxhr.responseText);
         
-        plant = jqxhr.responseText;
+        manageAjaxResponse(jqxhr.responseJSON);
     });
-    
-    return(plant);
-    console.log("End of makeAjaxCall");
 }
 
 /*
@@ -69,7 +66,7 @@ total       : The total number of items.
 total-pages : The number of pages.
 */
 
-var plantCollection = makeAjaxCall(fullURL)
+makeAjaxCall(fullURL)
 
-console.log(plantCollection);
+
 //document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
