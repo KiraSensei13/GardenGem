@@ -30,9 +30,10 @@ $.ajax({
     processData: true,
     data: {},
     dataType: "json",
-    success: function(data) {
-        console.log(data.getResponseHeader);
+    success: function(data, textStatus, request) {
         console.log(data);
+        console.log(textStatus);
+        console.log(request);
     }
 });
 
