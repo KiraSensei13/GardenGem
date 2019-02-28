@@ -47,7 +47,7 @@ function makeAjaxCall(urlTo){
     //this section is always executed
     jqxhr.always(function(){
         console.log(jqxhr);
-        console.log(jqxhr.responseJSON);
+        //console.log(jqxhr.responseJSON);
         
         plant = JSON.parse(jqxhr.responseJSON);
     });
@@ -70,4 +70,4 @@ total-pages : The number of pages.
 makeAjaxCall(fullURL)
 
 console.log(plant);
-document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
+//document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
