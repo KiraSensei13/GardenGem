@@ -6,5 +6,5 @@ function manageAjaxResponse(responseJSON) {
         plantCollection.push(responseJSON[i]);
     }
 
-    iconsole.log(plantCollection);
+    console.log(plantCollection);
 }
