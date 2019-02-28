@@ -31,6 +31,7 @@ function makeAjaxCall(urlTo){
         data: {},
         dataType: "json"
     });
+    var plant;
     
     //this section is executed when the server responds with no error
     jqxhr.done(function(){
@@ -47,7 +48,7 @@ function makeAjaxCall(urlTo){
         console.log(jqxhr);
         //console.log(jqxhr.responseJSON);
         
-        var plant = JSON.parse(jqxhr.responseText);
+        plant = JSON.parse(jqxhr.responseText);
         
         //plant = jqxhr.responseJSON;
     });
