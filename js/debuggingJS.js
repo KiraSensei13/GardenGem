@@ -17,8 +17,6 @@ const url         = 'https://trefle.io/api/plants';
 fullURL           = CORSproxy + '?' + url + trefleToken;
 console.log(fullURL);
 
-var plant = JSON.parse("[]");
-
 /*
 $.getJSON(fullURL, function(response){
     console.log(response);
@@ -49,10 +47,11 @@ function makeAjaxCall(urlTo){
         console.log(jqxhr);
         //console.log(jqxhr.responseJSON);
         
-        plant = JSON.parse(jqxhr.responseText);
+        var plant = JSON.parse(jqxhr.responseText);
         
         //plant = jqxhr.responseJSON;
     });
+    return(plant);
 }
 
 /*
@@ -69,7 +68,7 @@ total       : The total number of items.
 total-pages : The number of pages.
 */
 
-makeAjaxCall(fullURL)
+var plantCollection = makeAjaxCall(fullURL)
 
-console.log(plant);
+console.log(plantCollection);
 //document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
