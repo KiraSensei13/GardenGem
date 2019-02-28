@@ -17,7 +17,7 @@ const url         = 'https://trefle.io/api/plants';
 fullURL           = CORSproxy + '?' + url + trefleToken;
 console.log(fullURL);
 
-var plant = JSON.parse('{}');
+var plant = JSON.parse("[]");
 
 /*
 $.getJSON(fullURL, function(response){
@@ -49,7 +49,7 @@ function makeAjaxCall(urlTo){
         console.log(jqxhr);
         //console.log(jqxhr.responseJSON);
         
-        plant.add(JSON.parse(jqxhr.responseText));
+        plant = JSON.parse(jqxhr.responseText);
         
         //plant = jqxhr.responseJSON;
     });
