@@ -33,10 +33,7 @@ $.ajax({
     success: function(data, textStatus, request) {
         console.log(data);
         console.log(textStatus);
-        console.log(request.responseText);
-        console.log(request.responseXML);
-        console.log(request.getResponseHeader());
-        console.log(request.getAllResponseHeader());
+        console.log(request.getResponseHeader('Link'));
     }
 });
 
