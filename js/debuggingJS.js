@@ -13,8 +13,7 @@ http://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09
 
 const CORSproxy   = 'https://cors.io/';
 const trefleToken = '/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
-const url         = 'https://trefle.io/api/plants';
-fullURL           = CORSproxy + '?' + url + trefleToken;
+const url         = 'https://trefle.io/api/plants/?page=';
 console.log(fullURL);
 
 /*
@@ -66,7 +65,9 @@ total       : The total number of items.
 total-pages : The number of pages.
 */
 
-makeAjaxCall(fullURL)
-
+for (var page = 1; page < 5; page++) {
+    fullURL = CORSproxy + '?' + url + page + trefleToken;
+    makeAjaxCall(fullURL)
+}
 
 //document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
