@@ -23,38 +23,32 @@ $.getJSON(fullURL, function(response){
     document.getElementById("resText").innerHTML = JSON.stringify(response);
 });
 */
-
-var jqxhr = $.ajax({
-    type: 'GET',
-    url: fullURL,
-    processData: true,
-    data: {},
-    dataType: "json",
-    /*
-    success: function(data, textStatus, request) {
-        console.log(data);
-        console.log(textStatus);
-        console.log("getting header " + request.getResponseHeader('testHeader'));
-    }
-    */
-});
-
-//this section is executed when the server responds with no error
-jqxhr.done(function(){
-
-});
-
-//this section is executed when the server responds with error
-jqxhr.fail(function(){
-
-})
-
-//this section is always executed
-jqxhr.always(function(){
-    console.log(jqxhr);
-    console.log("getting header " + jqxhr.getResponseHeader('testHeader'));
-    console.log("getting data " + jqxhr.data);
-});
+function makeAjaxCall(urlTo){
+    var jqxhr = $.ajax({
+        type: 'GET',
+        url: urlTo,
+        processData: true,
+        data: {},
+        dataType: "json"
+    });
+    
+    //this section is executed when the server responds with no error
+    jqxhr.done(function(){
+        
+    });
+    
+    //this section is executed when the server responds with error
+    jqxhr.fail(function(){
+        
+    });
+    
+    //this section is always executed
+    jqxhr.always(function(data){
+        console.log(jqxhr);
+        console.log("getting header " + jqxhr.getResponseHeader('testHeader'));
+        console.log("getting data " + data);
+    });
+}
 
 
 // document.getElementById("DebugCont").innerHTML = "New text!";
