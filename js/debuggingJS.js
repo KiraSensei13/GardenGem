@@ -49,7 +49,7 @@ function makeAjaxCall(urlTo){
         console.log(jqxhr);
         //console.log(jqxhr.responseJSON);
         
-        plant = JSON.parse(jqxhr.responseJSON);
+        plant = jqxhr.responseJSON;
     });
 }
 
