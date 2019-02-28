@@ -24,36 +24,35 @@ $.getJSON(fullURL, function(response){
 });
 */
 
-$.ajax({
+var jqxhr = $.ajax({
     type: 'GET',
     url: fullURL,
     processData: true,
     data: {},
     dataType: "json",
+    /*
     success: function(data, textStatus, request) {
         console.log(data);
         console.log(textStatus);
-        console.log(request.getResponseHeader('Link'));
+        console.log("getting header " + request.getResponseHeader('testHeader'));
     }
+    */
 });
 
+//this section is executed when the server responds with no error
+jqxhr.done(function(){
 
-/*function reqListener () {
-        var responseHeader = JSON.parse(this.getResponseHeader);
-        console.log(responseHeader);
-        document.getElementById("resHeader").innerHTML = JSON.stringify(responseHeader);
+});
 
-        var responseContent = JSON.parse(this.responseText);
-        console.log(responseContent);
-        document.getElementById("resText").innerHTML = JSON.stringify(responseContent);
-}
+//this section is executed when the server responds with error
+jqxhr.fail(function(){
 
-var Http = new XMLHttpRequest();
-Http.onreadystatechange = function() {
-    //if (this.readyState == 4 && this.status == 200) {};
-    xhttp.addEventListener("load", reqListener);
-    xhttp.open("GET", fullURL, true);
-    xhttp.send('');
-};*/
+})
+
+//this section is always executed
+jqxhr.always(function(){
+    console.log("getting header " + jqxhr.getResponseHeader('testHeader'));
+});
+
 
 // document.getElementById("DebugCont").innerHTML = "New text!";
