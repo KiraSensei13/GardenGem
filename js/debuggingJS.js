@@ -68,8 +68,6 @@ for (var page = 1; page < 4907; page++) {
     var fullURL = CORSproxy + '?' + url + page + trefleToken;
     console.log(fullURL);
     makeAjaxCall(fullURL);
-    
-    if (page == 4906) {console.log(plantCollection);}
 }
 
 //document.getElementById("DebugCont").innerHTML = JSON.stringify(plant);
