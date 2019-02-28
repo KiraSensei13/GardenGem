@@ -12,8 +12,8 @@ http://trefle.io/api/plants/138738/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09
 */
 
 const CORSproxy   = 'https://cors.io/';
-const trefleToken = '/?token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
 const url         = 'https://trefle.io/api/plants/?page=';
+const trefleToken = '&token=SWVENEduMFMxellqNHFIM3RmL0c4Zz09';
 
 /*
 $.getJSON(fullURL, function(response){
