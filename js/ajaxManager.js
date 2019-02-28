@@ -1,7 +1,10 @@
 var plantCollection = [];
 
 function manageAjaxResponse(responseJSON) {
-    plantCollection.push(responseJSON);
+    
+    for (var i = 0; i < responseJSON.length; i++) {
+        plantCollection.push(responseJSON[i]);
+    }
     
     console.log(plantCollection);
 }
